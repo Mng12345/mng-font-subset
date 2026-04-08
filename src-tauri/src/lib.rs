@@ -670,7 +670,7 @@ async fn open_folder(path: String) -> Result<(), String> {
         return Err(format!("路径不存在: {}", path));
     }
 
-    let _folder_path = if path_obj.is_file() {
+    let folder_path = if path_obj.is_file() {
         path_obj
             .parent()
             .map(|p| p.to_path_buf())
