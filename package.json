@@ -1,0 +1,39 @@
+{
+  "name": "static-font-extractor",
+  "version": "1.0.0",
+  "description": "字体提取工具 - 从字体文件中提取指定字符的子集",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "tauri:build:win": "tauri build --target x86_64-pc-windows-msvc",
+    "tauri:build:mac": "tauri build --target universal-apple-darwin",
+    "tauri:build:all": "echo '请分别在 Windows 和 macOS 上执行对应构建命令' && echo 'Windows: npm run tauri:build:win' && echo 'macOS: npm run tauri:build:mac'"
+  },
+  "keywords": [
+    "font",
+    "extractor",
+    "tauri",
+    "solidjs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.10.1",
+    "code-inspector-plugin": "^1.5.1",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.5",
+    "vite-plugin-solid": "^2.11.12"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.10.1",
+    "@tauri-apps/plugin-dialog": "^2.7.0",
+    "@tauri-apps/plugin-log": "^2.8.0",
+    "@tauri-apps/plugin-shell": "^2.3.5",
+    "solid-js": "^1.9.12"
+  }
+}

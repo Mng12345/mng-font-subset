@@ -1,0 +1,30 @@
+[package]
+name = "font-extractor"
+version = "1.0.0"
+description = "字体提取工具 - 从字体文件中提取指定字符的子集"
+edition = "2021"
+rust-version = "1.70"
+
+[lib]
+name = "font_extractor_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-log = "2"
+tauri-plugin-shell = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# 字体处理库
+ttf-parser = "0.25"
+allsorts = "0.16"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true

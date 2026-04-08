@@ -1,0 +1,137 @@
+.font-uploader {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.upload-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s;
+  align-self: flex-start;
+}
+
+.upload-btn:hover {
+  background: var(--primary-hover);
+}
+
+.font-info {
+  background: #f8f9fa;
+  border-radius: var(--radius);
+  padding: 15px;
+  border: 1px solid var(--border-color);
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  color: var(--text-secondary);
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.value {
+  color: var(--text-primary);
+  word-break: break-all;
+}
+
+.value.path {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+}
+
+.font-collection-list {
+  margin: 10px 0;
+  padding: 10px;
+  background: #f0f1f2;
+  border-radius: var(--radius);
+}
+
+.collection-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.collection-item:hover {
+  background: #e0e1e2;
+}
+
+.collection-item.selected {
+  background: #d0e6f7;
+}
+
+.collection-item.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.collection-item.disabled:hover {
+  background: transparent;
+}
+
+.collection-item.disabled.selected {
+  background: #d0e6f7;
+}
+
+.preview-loading-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  background: #e8f4fd;
+  border-radius: 4px;
+}
+
+.loading-spinner-small {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #e0e0e0;
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.font-index {
+  color: var(--text-secondary);
+  font-family: 'Courier New', monospace;
+  min-width: 30px;
+}
+
+.font-name {
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.font-glyphs {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}

@@ -1,0 +1,76 @@
+.result-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.result-display.success {
+  background: #e8f5e9;
+  border: 1px solid var(--success-color);
+}
+
+.result-display.error {
+  background: #ffebee;
+  border: 1px solid var(--error-color);
+}
+
+.result-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.success .result-icon {
+  background: var(--success-color);
+  color: white;
+}
+
+.error .result-icon {
+  background: var(--error-color);
+  color: white;
+}
+
+.result-message {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.result-path {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  word-break: break-all;
+  text-align: center;
+}
+
+.result-path code {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.open-folder-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.open-folder-btn:hover {
+  background: var(--primary-hover);
+}
