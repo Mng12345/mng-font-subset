@@ -1,6 +1,6 @@
 # Font Extractor
 
-中文 | [English](README_EN.md)
+[中文](README.md) | English
 
 A desktop application built with Tauri + SolidJS for extracting font subsets based on specified characters, effectively reducing font file size.
 
